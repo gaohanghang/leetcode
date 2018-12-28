@@ -72,7 +72,7 @@ public class Solution {
         System.out.println(Arrays.toString(nums));
     }
 
-    // https://leetcode.com/problems/move-zeroes/discuss/72011/Simple-O(N)-Java-Solution-Using-Insert-Index
+    // https://leetcode.com/problems/move-zeroes/discuss/72011/Simple-O(N)-Java-Solution2-Using-Insert-Index
     public static void moveZeroes5(int[] nums) {
         if (nums == null || nums.length == 0) return;
 
