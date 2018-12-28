@@ -1,4 +1,4 @@
-package a1两数之和;
+package a1_两数之和;
 
 import java.util.Arrays;
 import java.util.HashMap;

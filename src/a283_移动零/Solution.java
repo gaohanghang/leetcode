@@ -1,4 +1,4 @@
-package a283移动零;
+package a283_移动零;
 
 import java.util.Arrays;
 

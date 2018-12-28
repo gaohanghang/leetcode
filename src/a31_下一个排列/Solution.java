@@ -1,4 +1,4 @@
-package a31下一个排列;
+package a31_下一个排列;
 
 /**
  * https://leetcode-cn.com/problems/next-permutation/solution/
