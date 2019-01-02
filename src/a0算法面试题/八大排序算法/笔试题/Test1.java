@@ -1,4 +1,4 @@
-package a0算法面试题;
+package a0算法面试题.八大排序算法.笔试题;
 
 import java.util.Arrays;
 
@@ -17,6 +17,17 @@ public class Test1 {
 
     public static int[] sort(int[] nums) {
         for(int i=0,j=0; i<nums.length; i++) {
+            if (nums[i] != 0) {
+                int temp = nums[i];
+                nums[i] = nums[j];
+                nums[j++] = temp;
+            }
+        }
+        return nums;
+    }
+
+    public static int[] sort2(int[] nums) {
+        for (int i = 0,j=0; i < nums.length; i++) {
             if (nums[i] != 0) {
                 int temp = nums[i];
                 nums[i] = nums[j];

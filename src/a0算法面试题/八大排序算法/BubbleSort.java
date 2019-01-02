@@ -12,7 +12,7 @@ import java.util.Arrays;
  * @author: Gao Hang Hang
  * @date 2019/01/01 18:18
  */
-public class Test {
+public class BubbleSort {
     public static void main(String[] args) {
         int[] ints = bubbleSort2(new int[]{4, 5, 3, 2});
         System.out.println(Arrays.toString(ints));
@@ -33,6 +33,7 @@ public class Test {
         return nums;
     }
 
+    // 冒泡排序
     public static int[] bubbleSort2(int[] nums) {
         for (int i = 0; i < nums.length - 1; i++) {
             for (int j = 0; j < nums.length - 1 - i; j++) {
