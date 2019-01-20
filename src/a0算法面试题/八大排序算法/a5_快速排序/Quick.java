@@ -3,6 +3,11 @@ package a0算法面试题.八大排序算法.a5_快速排序;
 import java.rmi.dgc.Lease;
 
 /**
+ * 时间复杂度: O(nlogn)
+ * 空间复杂度: O(logn)
+ * 稳定性: 不稳定
+ * 复杂性: 较复杂
+ *
  * @Description: 快速排序
  * @author: Gao Hang Hang
  * @date 2019/01/19 22:43
