@@ -4,11 +4,17 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 
 /**
- * @Description:
+ * @Description: 使用堆
  * @author: Gao Hang Hang
  * @date 2019/01/24 09:54
  */
 public class Solution {
+    /*
+       Complexity Analysis
+           Time complexity : O(Nlog(k)).
+           pace complexity : O(k).
+    */
+
     public int findKthLargest(int[] nums, int k) {
         // init heap 'the smallest element first' 初始化第一个元素最小的堆
         PriorityQueue<Integer> heap = new PriorityQueue<>(); // 优先队列
