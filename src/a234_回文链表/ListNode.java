@@ -1,9 +1,9 @@
-package a148_排序链表;
+package a234_回文链表;
 
 /**
  * @Description:
  * @author: Gao Hang Hang
- * @date 2019/02/26 22:27
+ * @date 2019/03/05 13:22
  */
 public class ListNode {
     int val;
@@ -11,5 +11,4 @@ public class ListNode {
     ListNode(int x) {
         val = x;
     }
-
 }
