@@ -9,14 +9,36 @@ public class Solution2 {
     public boolean isPalindrome(ListNode head) {
         if (head == null || head.next == null) return true;
 
-        ListNode cur = head, fast = head, next = cur.next, left = null;
+        ListNode fast = head;
+        ListNode slow = head;
+        // 根据快慢指针，找到链表的中点
         while (fast.next != null && fast.next.next != null) {
-            // 快指针先走2步
             fast = fast.next.next;
-            // 进行反转
-
+            slow = slow.next;
         }
 
-        return false;
+        // reverse逆序后半部分
+        slow = reverse(slow.next);
+
+        while (slow != null) {
+            if (head.val != slow.val) {
+                return false;
+            }
+            head = head.next;
+            slow = slow.next;
+        }
+        return true;
+    }
+
+    // 翻转链表
+    private ListNode reverse(ListNode head) {
+        // 递归到最后一个节点，返回新的头节点
+        if (head.next == null) {
+            return head;
+        }
+        ListNode newHead = reverse(head.next);
+        head.next.next = head;
+        head.next = null;
+        return newHead;
     }
 }
