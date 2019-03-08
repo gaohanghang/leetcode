@@ -1,7 +1,7 @@
 package a234_回文链表;
 
 /**
- * @Description:
+ * @Description: 使用快慢指针找到中点， 翻转后半部分比较
  * @author: Gao Hang Hang
  * @date 2019/03/05 20:34
  */
@@ -31,7 +31,7 @@ public class Solution2 {
     }
 
     // 翻转链表
-    private ListNode reverse(ListNode head) {
+    private ListNode reverse(ListNode head) { // 4 3 2 1 null
         // 递归到最后一个节点，返回新的头节点
         if (head.next == null) {
             return head;
