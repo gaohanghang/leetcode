@@ -23,7 +23,7 @@ public class Shell {
         while (h >= 1) {
             // 将数组变为h有序
             for (int i = h; i < N; i++) {
-                // 将a[i] 插入到a[i-h], a[i-2*h], a[i-3*h]... 之中
+                // 将a[i] 插入到a[i-h], a[i-second*h], a[i-3*h]... 之中
                 for (int j = i; j >= h && less(a[j], a[j - h]); j -= h) {
                     exch(a, j, j - h);
                 }

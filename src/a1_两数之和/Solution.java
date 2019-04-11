@@ -13,7 +13,7 @@ public class Solution {
 
     }
 
-    // 方法一：暴力法 时间复杂度是o(n^2) 空间复杂度是o(1)
+    // 方法一：暴力法 时间复杂度是o(n^second) 空间复杂度是o(1)
     public static int[] towSum(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {

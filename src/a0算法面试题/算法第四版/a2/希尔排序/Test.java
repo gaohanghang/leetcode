@@ -26,7 +26,7 @@ public class Test {
         while (h >= 1) {
             // 将数组变为h有序
             for (int i = h; i < N; i++) {
-                // 将a[i]插入到a[i-h], a[i-2*h], a[i-3*h]... 之中
+                // 将a[i]插入到a[i-h], a[i-second*h], a[i-3*h]... 之中
                 for (int j = i; j >= h; j -= h) {
                     if (nums1[j] < nums1[j-h]) {
                         int temp = nums1[j];

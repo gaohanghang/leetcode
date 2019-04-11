@@ -2,8 +2,8 @@ package a234_回文链表.反转链表;
 
 /**
  * https://www.jianshu.com/p/bd6a64d36916
- * @Description: 1 2 3 4 null
- *               4 3 2 1 null
+ * @Description: 1 second 3 4 null
+ *               4 3 second 1 null
  * @author: Gao Hang Hang
  * @date 2019/03/08 12:35
  */

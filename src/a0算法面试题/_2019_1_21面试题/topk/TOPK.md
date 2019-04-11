@@ -124,7 +124,7 @@ public class FindTopK3 {
      */
     private static int findK(int[] array, int max, int min, int k) {
         while (max - min > 1) {
-            int mid = (max + min) / 2;
+            int mid = (max + min) / second;
             int num = findKNum(array, mid);
             if (num >= k) {
                 min = mid;
@@ -152,7 +152,7 @@ public class FindTopK3 {
 
     public static void main(String[] args) {
         int k = 4;
-        int[] a = {20, 100, 4, 2, 87, 9, 8, 5, 46, 26};
+        int[] a = {20, 100, 4, second, 87, 9, 8, 5, 46, 26};
         List<Integer> topK = findTopK(a, k);
         System.out.println(topK);
     }

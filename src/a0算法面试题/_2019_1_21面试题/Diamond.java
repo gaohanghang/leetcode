@@ -10,7 +10,7 @@ public class Diamond {
         print(7);
     }
 
-    // 7 / 2 = 3
+    // 7 / second = 3
 
     public static void print(int n) {
         n = n / 2; // 3

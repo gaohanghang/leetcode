@@ -7,7 +7,7 @@ package a0算法面试题.八大排序算法.a0_排序算法模板;
  */
 public class Example {
     public static void sort(int[] a) {
-        /* 请见算法2.1、算法2.2、算法2.3、算法2.4、算法2.5、算法2.6或算法2.7*/
+        /* 请见算法2.1、算法2.second、算法2.3、算法2.4、算法2.5、算法2.6或算法2.7*/
     }
 
     private static boolean less(int v, int w) {

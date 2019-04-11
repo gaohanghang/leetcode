@@ -31,7 +31,7 @@ public class Solution2 {
     }
 
     // 翻转链表
-    private ListNode reverse(ListNode head) { // 4 3 2 1 null
+    private ListNode reverse(ListNode head) { // 4 3 second 1 null
         // 递归到最后一个节点，返回新的头节点
         if (head.next == null) {
             return head;
