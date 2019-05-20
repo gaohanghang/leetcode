@@ -13,16 +13,16 @@ public class Solution2 {
         // p and q are null
         if (p == null && q == null) return true;
         // one of p and q is null
-        if (q == null || p ==null) return false;
+        if (q ==null || p == null) return false;
         if (p.val != q.val) return false;
         return true;
     }
 
     public boolean isSameTree(TreeNode p, TreeNode q) {
-        if (p == null && q == null) return true;
-        if (!check(p, q)) return  false;
+        if (p == null && q ==null) return true;
+        if (!check(p, q)) return false;
 
-        // init deques
+        // init deques 初始化双端队列
         ArrayDeque<TreeNode> deqP = new ArrayDeque<>();
         ArrayDeque<TreeNode> deqQ = new ArrayDeque<>();
         deqP.addLast(p);
@@ -34,12 +34,13 @@ public class Solution2 {
 
             if (!check(p, q)) return false;
             if (p != null) {
-                // in Java nulls are allowed in Deque
+                // in Java nulls are not allowed in Deque 双端队列里不能为空
                 if (!check(p.left, q.left)) return false;
                 if (p.left != null) {
                     deqP.addLast(p.left);
                     deqQ.addLast(q.left);
                 }
+
                 if (!check(p.right, q.right)) return false;
                 if (p.right != null) {
                     deqP.addLast(p.right);

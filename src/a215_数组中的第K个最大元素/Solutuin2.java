@@ -1,8 +1,5 @@
 package a215_数组中的第K个最大元素;
 
-import edu.princeton.cs.algs4.In;
-
-import java.util.Arrays;
 import java.util.PriorityQueue;
 
 /**

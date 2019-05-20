@@ -1,6 +1,5 @@
 package a0算法面试题._2018_12_20面试题;
 
-import org.apache.log4j.Logger;
 
 import java.util.HashMap;
 import java.util.Iterator;
