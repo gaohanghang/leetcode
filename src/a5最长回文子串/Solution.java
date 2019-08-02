@@ -1,6 +1,5 @@
 package a5最长回文子串;
 
-import com.sun.tools.corba.se.idl.StringGen;
 
 public class Solution {
     public static void main(String[] args) {

@@ -1,6 +1,5 @@
 package a8_字符串转换整数;
 
-import org.omg.PortableInterceptor.INACTIVE;
 
 public class Solution2 {
     public static void main(String[] args) {

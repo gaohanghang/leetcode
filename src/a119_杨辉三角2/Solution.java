@@ -1,6 +1,5 @@
 package a119_杨辉三角2;
 
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
