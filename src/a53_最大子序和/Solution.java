@@ -1,4 +1,4 @@
-package a53最大子序和;
+package a53_最大子序和;
 
 /**
  * @Description: 动态规划解法
