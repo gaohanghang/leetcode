@@ -1,4 +1,4 @@
-package a4_寻找两个有序数组的中位数.cspiration题解;
+package a04_寻找两个有序数组的中位数.cspiration题解;
 
 /**
  * @Description
