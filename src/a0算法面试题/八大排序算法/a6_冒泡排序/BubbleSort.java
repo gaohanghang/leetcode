@@ -1,4 +1,4 @@
-package a0算法面试题.八大排序算法;
+package a0算法面试题.八大排序算法.a6_冒泡排序;
 
 import java.util.Arrays;
 

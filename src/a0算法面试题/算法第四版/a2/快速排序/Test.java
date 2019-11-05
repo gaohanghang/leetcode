@@ -14,6 +14,7 @@ public class Test {
 
     public void sort(int[] a) {
         sort(a, 0, a.length -1);
+        System.out.println(Arrays.toString(a));
     }
 
     public void sort(int[] a, int lo, int hi) {
