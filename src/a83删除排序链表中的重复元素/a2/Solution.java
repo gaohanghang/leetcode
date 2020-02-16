@@ -1,14 +1,12 @@
-package a83删除排序链表中的重复元素;
+package a83删除排序链表中的重复元素.a2;
 
 /**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
-class Solution {
+ * @Description
+ * @Author Gao Hang Hang
+ * @Date 2020-02-16 21:26
+ **/
+public class Solution {
+
     public ListNode deleteDuplicates(ListNode head) {
         // 指定 current 指针指向头部 head，current用来遍历，head用来最后返回
         ListNode current = head;
@@ -24,4 +22,5 @@ class Solution {
         }
         return head;
     }
+
 }
