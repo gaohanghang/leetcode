@@ -1,4 +1,4 @@
-package a0书籍.a程序员代码面试指南.a1设计一个有getMin功能的栈;
+package a0书籍.a程序员代码面试指南.a1.a1设计一个有getMin功能的栈;
 
 import java.util.Stack;
 
