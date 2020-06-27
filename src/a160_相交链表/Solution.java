@@ -19,7 +19,7 @@ public class Solution {
         while (a != b) {
             // for the end of first iteration, we just reset the pointer to the head of another linkedlist
             // 对于第一次迭代的结束，我们只是将指针重置为另一个链表的头部
-            a = a == null ? headA : a.next;
+            a = a == null ? headB : a.next;
             b = b == null ? headA : b.next;
         }
 

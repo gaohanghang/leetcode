@@ -1,53 +1,61 @@
 package a160_相交链表;
 
+import a160_相交链表.cspiration.ListNode;
+
 /**
  * @Description: The catch here is that just calculate the difference in length of two linked list and then move the higher length list head to the calculated difference.
  * @author: Gao Hang Hang
  * @date 2019/03/01 13:17
  */
 public class Solution2 {
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    /**
+     * For example, the following two linked lists:
+     A:          a1 → a2
+     ↘
+     c1 → c2 → c3
+     ↗
+     B:     b1 → b2 → b3
+     begin to intersect at node c1.
+     time : O(n);
+     space : O(1);
+     * @param headA
+     * @param headB
+     * @return
+     */
+    public a160_相交链表.cspiration.ListNode getIntersectionNode(a160_相交链表.cspiration.ListNode headA, a160_相交链表.cspiration.ListNode headB) {
         if (headA == null || headB == null) return null;
-        ListNode A = headA;
-        ListNode B = headB;
-        int lengthA = 0;
-        int lengthB = 0;
 
-        while (A != null || B != null) {
-            if (A!=null){
-                lengthA++;
-                A = A.next;
-            }
-            if (B != null) {
-                lengthB++;
-                B = B.next;
-            }
-        }
+        /* 获取链表长度 */
+        int lenA = len(headA);
+        int lenB = len(headB);
 
-        // 长的链表先走长的部分
-        int diff = 0;
-        if (lengthA > lengthB) {
-            diff = lengthA - lengthB;
-            while (diff!=0) {
+        /* 将较长链表的指针向前移动 */
+        if (lenA > lenB) {
+            while (lenA != lenB) {
                 headA = headA.next;
-                diff--;
+                lenA--;
             }
         } else {
-            diff = lengthB - lengthA;
-            while (diff != 0) {
+            while (lenA != lenB) {
                 headB = headB.next;
-                diff--;
+                lenB--;
             }
         }
 
-        // 长度一样
-        while (headA!=null) {
-            if (headA == headB) {
-                return headA;
-            }
+        /* 同时移动两个元素，直到遇到相同元素 */
+        while (headA != headB) {
             headA = headA.next;
             headB = headB.next;
         }
-        return null;
+        return headA;
+    }
+
+    public int len(ListNode head) {
+        int len = 1;
+        while (head != null) {
+            head = head.next;
+            len++;
+        }
+        return len;
     }
 }
