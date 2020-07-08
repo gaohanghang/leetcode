@@ -1,28 +1,40 @@
-//package a104_二叉树的最大深度;
-//
-//import javafx.util.Pair;
-//
-//import java.util.LinkedList;
-//import java.util.Queue;
-//
-//public class Solution2 {
-//    public int maxDepth(TreeNode root) {
-//        Queue<Pair<TreeNode, Integer>> stack = new LinkedList<>();
-//        if (root != null) {
-//            stack.add(new Pair<>(root, 1));
-//        }
-//
-//        int depth = 0;
-//        while (!stack.isEmpty()) {
-//            Pair<TreeNode, Integer> current = stack.poll();
-//            root = current.getKey();
-//            int current_depth = current.getValue();
-//            if (root != null) {
-//                Math.max(depth, current_depth);
-//                stack.add(new Pair<>(root.left, current_depth + 1));
-//                stack.add(new Pair<>(root.right, current_depth + 1));
-//            }
-//        }
-//        return depth;
-//    }
-//}
+package a104_二叉树的最大深度;
+
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+/**
+ * BFS迭代实现二叉树最大深度
+ * 时间复杂度O(n)
+ * 空间复杂度:线性表最差O(n)、二叉树完全平衡最好O(logn)
+ *
+ * @param root 根节点
+ * @return 最大深度
+ */
+public class Solution2 {
+    public int maxDepth(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        //BFS的层次遍历思想，记录二叉树的层数，
+        //遍历完，层数即为最大深度
+        LinkedList<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        int maxDepth = 0;
+        while (!queue.isEmpty()) {
+            maxDepth++;
+            int levelSize = queue.size();
+            for (int i = 0; i < levelSize; i++) {
+                TreeNode node = queue.pollFirst();
+                if (node.left != null) {
+                    queue.add(node.left);
+                }
+                if (node.right != null) {
+                    queue.add(node.right);
+                }
+            }
+        }
+        return maxDepth;
+    }
+}
