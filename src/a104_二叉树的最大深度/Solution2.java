@@ -38,3 +38,4 @@ public class Solution2 {
         return maxDepth;
     }
 }
+// 3ms
