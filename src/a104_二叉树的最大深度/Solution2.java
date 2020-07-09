@@ -1,11 +1,10 @@
 package a104_二叉树的最大深度;
 
-
 import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * BFS迭代实现二叉树最大深度
+ * BFS层次遍历思想迭代实现二叉树最大深度
  * 时间复杂度O(n)
  * 空间复杂度:线性表最差O(n)、二叉树完全平衡最好O(logn)
  *
