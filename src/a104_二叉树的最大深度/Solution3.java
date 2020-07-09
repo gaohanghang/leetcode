@@ -13,7 +13,6 @@ import java.util.TreeMap;
  * @return 最大深度
  */
 public class Solution3 {
-
     public int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;
@@ -22,13 +21,13 @@ public class Solution3 {
         Stack<Integer> value = new Stack<>();
         stack.push(root);
         value.push(1);
-        int max = 0;
+        int maxDepth = 0;
         // DFS实现前序遍历，每个节点记录其所在深度
         while (!stack.isEmpty()) {
             TreeNode node = stack.pop();
             // DFS过程不断比较更新最大深度
             int temp = value.pop();
-            max = Math.max(temp, max);
+            maxDepth = Math.max(temp, maxDepth);
             // 当前节点的子节点入栈，同时深度+1
             if (node.left != null) {
                 stack.push(node.left);
@@ -41,8 +40,7 @@ public class Solution3 {
                 value.push(temp + 1);
             }
         }
-        return max;
+        return maxDepth;
     }
-
 }
 // 7ms

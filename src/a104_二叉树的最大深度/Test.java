@@ -9,14 +9,14 @@ package a104_二叉树的最大深度;
 public class Test {
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        TreeNode root = new TreeNode(0);
-        root.left = new TreeNode(0);
-        root.left = new TreeNode(0);
-        root.right = new TreeNode(0);
-        root.left.left = new TreeNode(0);
-        root.left.right = new TreeNode(0);
-        root.left.left.right = new TreeNode(0);
+        //Solution solution = new Solution();
+        //Solution2 solution = new Solution2();
+        Solution3 solution = new Solution3();
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(9);
+        root.right = new TreeNode(20);
+        root.right.left = new TreeNode(15);
+        root.right.right = new TreeNode(7);
         System.out.println(solution.maxDepth(root));
     }
 
