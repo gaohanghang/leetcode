@@ -5,7 +5,7 @@ import java.util.Stack;
 import java.util.TreeMap;
 
 /**
- * DFS迭代实现二叉树最大深度
+ * DFS前序遍历思想迭代实现二叉树最大深度
  * 时间复杂度O(n)
  * 空间复杂度:线性表最差O(n)、二叉树完全平衡最好O(logn)
  *
