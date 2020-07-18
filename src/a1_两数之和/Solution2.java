@@ -10,13 +10,6 @@ import java.util.Map;
  * @date 2018/12/26 11:33
  */
 public class Solution2 {
-    public static void main(String[] args) {
-        int[] nums = {2, 7, 11, 15};
-        int target = 9;
-
-        int[] ints = twoSum(nums, target);
-        System.out.println(Arrays.toString(ints));
-    }
 
     //方法二：两遍哈希表 时间复杂度 O(n) 空间复杂度 O(n)
     public static int[] twoSum(int[] nums, int target) {
