@@ -2,12 +2,13 @@ package a151_翻转字符串中的每个单词;
 
 /**
  * 先反转字符串再反转每个单词
- *  - 先翻转整个字符串
- *  - 再翻转每个单词
+ * - 先翻转整个字符串
+ * - 再翻转每个单词
+ * <p>
+ * 复杂度分析
+ * 时间复杂度：O(N) 遍历字符串
+ * 空间复杂度：O(N)
  *
- *  复杂度分析
- *  时间复杂度：O(N) 遍历字符串
- *  空间复杂度：O(N)
  * @Description
  * @Author Gao Hang Hang
  * @Date 2020-07-18 02:17
@@ -33,7 +34,7 @@ public class Solution2 {
 
             if (c != ' ') {
                 sb.append(c);
-            } else if (sb.charAt(sb.length() - 1) != ' ') {
+            } else if (sb.charAt(sb.length() - 1) != ' ') { // 字符串末尾不为空格就添加，否则就不添加，以此去除字符串间多余的空白字符
                 sb.append(c);
             }
 
@@ -44,12 +45,14 @@ public class Solution2 {
 
     /**
      * 翻转字符串
+     *
      * @param sb
      * @param left
      * @param right
      */
     public void reverse(StringBuilder sb, int left, int right) {
         while (left < right) {
+            // 左侧字符和右侧互换
             char tmp = sb.charAt(left);
             sb.setCharAt(left++, sb.charAt(right));
             sb.setCharAt(right--, tmp);
@@ -58,6 +61,7 @@ public class Solution2 {
 
     /**
      * 翻转每个单词
+     *
      * @param sb
      */
     public void reverseEachWord(StringBuilder sb) {
