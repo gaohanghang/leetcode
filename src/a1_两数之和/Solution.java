@@ -1,7 +1,5 @@
 package a1_两数之和;
 
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @Description:

@@ -17,8 +17,8 @@ public class Test {
 
         // 测试
         Solution solution = new Solution();
-        int[] ints = solution.twoSum(nums, target);
-        System.out.println(Arrays.toString(ints));
+        int[] result = solution.twoSum(nums, target);
+        System.out.println(Arrays.toString(result));
 
         Solution2 solution2 = new Solution2();
         int[] result2 = solution2.twoSum(nums, target);
