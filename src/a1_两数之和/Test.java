@@ -13,11 +13,20 @@ public class Test {
         // 测试用例
         int[] nums = {2, 7, 11, 15};
         int target = 9;
+        //int target = 18;
 
         // 测试
         Solution solution = new Solution();
-        int[] ints = solution.towSum(nums, target);
+        int[] ints = solution.twoSum(nums, target);
         System.out.println(Arrays.toString(ints));
+
+        Solution2 solution2 = new Solution2();
+        int[] result2 = solution2.twoSum(nums, target);
+        System.out.println(Arrays.toString(result2));
+
+        Solution3 solution3 = new Solution3();
+        int[] result3 = solution3.twoSum(nums, target);
+        System.out.println(Arrays.toString(result3));
     }
 
 }
