@@ -11,14 +11,18 @@ package a108_将有效数组转换为二叉搜索树;
  */
 class Solution {
     public TreeNode sortedArrayToBST(int[] nums) {
-        if (nums.length == 0) return null;
+        if (nums.length == 0) {
+            return null;
+        }
         TreeNode head = helper(nums, 0, nums.length - 1);
         return head;
     }
 
     public TreeNode helper(int[] nums, int low, int high) {
         // Done，边界条件
-        if (low > high) return null;
+        if (low > high) {
+            return null;
+        }
         // 取中间值作为根节点
         int mid = (low + high) / 2;
         TreeNode node = new TreeNode(nums[mid]);
