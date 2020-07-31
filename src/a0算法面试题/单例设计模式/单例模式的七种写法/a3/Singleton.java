@@ -8,6 +8,7 @@ import edu.princeton.cs.algs4.StdIn;
  * @Date 2019-09-10 21:12
  **/
 public class Singleton {
+
     private static Singleton instance = new Singleton();
 
     private Singleton() {}
@@ -15,4 +16,5 @@ public class Singleton {
     public static Singleton getInstance() {
         return instance;
     }
+
 }

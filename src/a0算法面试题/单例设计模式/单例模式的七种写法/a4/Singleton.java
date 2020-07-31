@@ -7,6 +7,7 @@ package a0算法面试题.单例设计模式.单例模式的七种写法.a4;
  * @Date 2019-09-10 21:14
  **/
 public class Singleton {
+
     private static Singleton instance = null;
 
     static {
@@ -18,4 +19,5 @@ public class Singleton {
     public static Singleton getInstance() {
         return instance;
     }
+
 }
