@@ -7,11 +7,9 @@ package a0算法面试题.单例设计模式.单例模式的七种写法.a1;
  **/
 public class Singleton {
 
-    // private 成员变量是私有的
-    // static
     private static Singleton instance;
 
-    // 构造器私有，就无法通过new Singleton() 来创建对象了，保证内存中只有一个对象
+    // 构造器私有，其他类就无法通过new Singleton() 来创建对象实例了
     private Singleton() {
     }
 
