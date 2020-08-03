@@ -11,8 +11,8 @@ public class Test {
 
     public static void main(String[] args) {
         // 假如构造函数为 public 时
-        Singleton singleton = new Singleton();
-        System.out.println(singleton);
+        //Singleton singleton = new Singleton();
+        //System.out.println(singleton);
 
         Singleton instance = Singleton.getInstance();
         System.out.println(instance);
