@@ -23,7 +23,9 @@ public class Singleton {
     }
 
     public static Singleton getSingleton() {
+        // 这里的 if 判断作用：减少除了初始化时之外的所有锁获取等待过程，从而减少性能开销
         if (singleton == null) {
+            // 这里的 if 判断作用： 避免生成多个对象实例
             synchronized (Singleton.class) {
                 if (singleton == null) {
                     singleton = new Singleton();

@@ -1,9 +1,9 @@
 package a0算法面试题.单例设计模式.单例模式的七种写法2.a1;
 
 /**
- * @Description 懒汉式 线程不安全
+ * @Description 1. 懒汉式，线程不安全
  * @Author Gao Hang Hang
- * @Date 2020-08-03 11:28
+ * @Date 2020-08-04 00:07
  **/
 public class Singleton {
 
@@ -12,7 +12,7 @@ public class Singleton {
     private Singleton() {
     }
 
-    public static Singleton Singleton() {
+    public static Singleton getInstance() {
         if (instance == null) {
             instance = new Singleton();
         }
