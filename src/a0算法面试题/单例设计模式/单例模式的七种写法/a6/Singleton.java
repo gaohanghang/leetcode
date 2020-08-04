@@ -7,15 +7,10 @@ package a0算法面试题.单例设计模式.单例模式的七种写法.a6;
  **/
 public enum Singleton {
 
-    INSTANCE;
-    int value;
+    INSTANCE; // 枚举里的属性相当于Singleton的实例
 
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
+    public void whateverMethod() {
+        System.out.println("哈哈");
     }
 
 }

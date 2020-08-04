@@ -16,6 +16,13 @@ public class Singleton {
         若发生重排序，假设 A 线程执行了 1 和 3 ，还没有执行 2，B 线程来到判断 NULL，B 线程就会直接返回还没初始化的 instance 了。
 
         volatile 可以避免重排序。
+
+
+        这里用 static 是因为 getInstance() 方法是静态的，而静态方法不能访问非静态成员变量，所以 instanc 必须是静态成员变量
+
+        getInstance() 方法是静态是因为构造器是私有的，只能通过 Singleton.getInstance() 方法获取对象实例
+
+        构造器是私有是为了防止其他类通过 new Singleton() 来创建对象实例
      */
     private volatile static Singleton singleton;
 
@@ -24,9 +31,9 @@ public class Singleton {
 
     public static Singleton getSingleton() {
         // 这里的 if 判断作用：减少除了初始化时之外的所有锁获取等待过程，从而减少性能开销
-        if (singleton == null) {
-            // 这里的 if 判断作用： 避免生成多个对象实例
-            synchronized (Singleton.class) {
+        if (singleton == null) { // C E F G
+            synchronized (Singleton.class) { // A B
+                // 这里的 if 判断作用： 避免生成多个对象实例
                 if (singleton == null) {
                     singleton = new Singleton();
                 }
