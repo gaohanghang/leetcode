@@ -18,7 +18,7 @@ public class Singleton {
         volatile 可以避免重排序。
 
 
-        这里用 static 是因为 getInstance() 方法是静态的，而静态方法不能访问非静态成员变量，所以 instanc 必须是静态成员变量
+        这里用 static 是因为 getInstance() 方法是静态的，而静态方法不能访问非静态成员变量，所以 instance 必须是静态成员变量
 
         getInstance() 方法是静态是因为构造器是私有的，只能通过 Singleton.getInstance() 方法获取对象实例
 

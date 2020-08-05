@@ -2,7 +2,7 @@ package a0算法面试题.单例设计模式.单例模式的七种写法.a3;
 
 
 /**
- * @Description 饿汉式
+ * @Description 3 饿汉式
  * @Author Gao Hang Hang
  * @Date 2019-09-10 21:12
  **/
