@@ -1,4 +1,4 @@
-package a0算法面试题.单例设计模式.枚举深究;
+package a0算法面试题.单例设计模式.枚举深究.a1;
 
 /**
  * @Description

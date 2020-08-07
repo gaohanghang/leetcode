@@ -30,7 +30,7 @@ public class Singleton {
     }
 
     public static Singleton getSingleton() {
-        // 这里的 if 判断作用：减少除了初始化时之外的所有锁获取等待过程，从而减少性能开销
+        // 这里的 if 判断作用：检查实例是否存在，如果存在即可返回，不存在则进入同步块，减少除了初始化时之外的所有锁获取等待过程，从而减少性能开销
         if (singleton == null) { // C E F G
             synchronized (Singleton.class) { // A B
                 // 这里的 if 判断作用： 避免生成多个对象实例
