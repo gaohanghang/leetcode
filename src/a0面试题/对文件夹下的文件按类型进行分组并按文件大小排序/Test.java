@@ -8,14 +8,15 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * 对文件夹下的文件按类型进行分组并按文件大小排序。比如文件夹下面有 txt，doc类型的文件，就先按txt，doc类型分组，每组再按文件大小降序排列
+ * 统计一个不固定深度的文件夹下的所有文件类型，对文件夹下的文件按类型进行分组并按文件大小排序。比如文件夹下面有 txt，doc类型的文件，就先按txt，doc类型分组，每组再按文件大小降序排列
+ *
  * @author ashutosh
  */
 public class Test {
 
     static List<MyFile> myFileList = new ArrayList<>();
 
-    public void readFile(File f){
+    public void readFile(File f) {
 
         // 文件名
         String name = f.getName();
@@ -39,19 +40,19 @@ public class Test {
         myFileList.add(myFile);
     }
 
-    public void readDir(File f){
+    public void readDir(File f) {
         File subdir[] = f.listFiles();
-        for(File f_arr : subdir){
-            if(f_arr.isFile()){
+        for (File f_arr : subdir) {
+            if (f_arr.isFile()) {
                 this.readFile(f_arr);
             }
-            if(f_arr.isDirectory()){
+            if (f_arr.isDirectory()) {
                 this.readDir(f_arr);
             }
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Test test = new Test();
         File mainDir = new File("/Users/gaohanghang/vant");
         test.readDir(mainDir);

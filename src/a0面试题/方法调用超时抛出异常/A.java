@@ -3,7 +3,7 @@ package a0面试题.方法调用超时抛出异常;
 import java.util.concurrent.*;
 
 /**
- * A 类 调用 B 类的 void c(Object o) 方法，需要实现调用 c 方法在5秒内就正常进行，超过 5 秒抛出超时异常
+ *  A 类 调用 B 类的 void c(Object o) 方法，实现调用 c 方法在5秒内就正常进行，如果超过 5 秒则抛出超时异常
  */
 public class A {
 
@@ -23,7 +23,7 @@ public class A {
         Future<String> future = exec.submit(call);
         String obj = null;
         try{
-            obj = future.get(1000 * 5, TimeUnit.MILLISECONDS);
+            obj = future.get(5, TimeUnit.SECONDS);
             System.out.print("任务成功返回"+obj);
         }catch(InterruptedException e){
             e.printStackTrace();
