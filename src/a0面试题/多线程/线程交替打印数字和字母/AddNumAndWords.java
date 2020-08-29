@@ -1,4 +1,4 @@
-package a0算法面试题.线程交替打印;
+package a0面试题.多线程.线程交替打印数字和字母;
 
 /**
  * @Description http://www.voidcn.com/article/p-tbgwkxdi-bxn.html
@@ -6,16 +6,22 @@ package a0算法面试题.线程交替打印;
  * @Date 2019-09-09 20:02
  **/
 public class AddNumAndWords {
-    private static class demoThread1 extends Thread {
+
+    /**
+     * 打印数字
+     */
+    private static class NumThread extends Thread {
         private final AddNumAndWords add;
-        public demoThread1(AddNumAndWords add) {
+
+        public NumThread(AddNumAndWords add) {
             this.add = add;
         }
+
         @Override
         public void run() {
             try {
                 synchronized (add) {
-                    for (int i = 1; i <=3; i++) {
+                    for (int i = 1; i <= 3; i++) {
                         System.out.print(i);
                         add.notifyAll();
                         add.wait();
@@ -27,11 +33,17 @@ public class AddNumAndWords {
         }
     }
 
-    private static class demoThread2 extends Thread {
+    /**
+     * 打印字母
+     */
+    private static class WordThread extends Thread {
+
         private final AddNumAndWords add;
-        public demoThread2(AddNumAndWords add) {
+
+        public WordThread(AddNumAndWords add) {
             this.add = add;
         }
+
         @Override
         public void run() {
             try {
@@ -39,7 +51,7 @@ public class AddNumAndWords {
                     for (int i = 0; i < 3; i++) {
                         add.wait();
                         char ss = (char) (97 + i);
-                        System.out.print(String.valueOf(ss));
+                        System.out.print(ss);
                         add.notifyAll();
                     }
                 }
@@ -50,9 +62,11 @@ public class AddNumAndWords {
     }
 
     public static void main(String[] args) {
+        // 创建实例
         AddNumAndWords add = new AddNumAndWords();
-        Thread t1 = new demoThread2(add);
-        Thread t2 = new demoThread1(add);
+        // 创建两个线程并启动
+        Thread t1 = new WordThread(add);
+        Thread t2 = new NumThread(add);
         t1.start();
         t2.start();
 
@@ -63,4 +77,5 @@ public class AddNumAndWords {
             e.printStackTrace();
         }
     }
+
 }

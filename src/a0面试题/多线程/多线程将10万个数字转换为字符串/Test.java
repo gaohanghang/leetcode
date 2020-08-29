@@ -1,4 +1,4 @@
-package a0算法面试题.面试题.多线程打印10万个数字;
+package a0面试题.多线程.多线程将10万个数字转换为字符串;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
