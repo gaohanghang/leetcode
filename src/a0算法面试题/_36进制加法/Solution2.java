@@ -1,6 +1,5 @@
 package a0算法面试题._36进制加法;
 
-import com.sun.tools.jdeprscan.scan.Scan;
 
 import java.util.Arrays;
 import java.util.List;
