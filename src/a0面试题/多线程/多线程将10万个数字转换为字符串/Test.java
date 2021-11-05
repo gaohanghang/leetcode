@@ -15,12 +15,9 @@ public class Test {
     public static void main(String[] args) {
         for (int i = 0; i < 100000; i++) {
             int number = i;
-            fixedThreadPool.execute(new Runnable() {
-                @Override
-                public void run() {
-                    String s = intToString(number);
-                    System.out.println(s);
-                }
+            fixedThreadPool.execute(() -> {
+                String s = intToString(number);
+                System.out.println(s);
             });
         }
     }
