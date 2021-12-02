@@ -1,6 +1,6 @@
 # Leetcode solutions in Java
 
-📒 笔记地址：https://www.yuque.com/gaohanghang/sgrbwh/ndmfr3
+📒 笔记地址：https://www.yuque.com/gaohanghang/xz8ccs
 
 ## 参考
 
