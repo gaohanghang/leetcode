@@ -18,21 +18,15 @@ public class CountBigDataByJoinTest {
 
 	public static void main(String[] args) throws InterruptedException {
 		long start = System.nanoTime();
-		Thread countThread1 = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				for(int i =0; i < n/2; i++) {
-					ai1++;
-				}
+		Thread countThread1 = new Thread(() -> {
+			for(int i =0; i < n/2; i++) {
+				ai1++;
 			}
 		});
 		countThread1.start();
-		Thread countThread2 = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				for(int i =0; i < n/2; i++) {
-					ai2++;
-				}
+		Thread countThread2 = new Thread(() -> {
+			for(int i =0; i < n/2; i++) {
+				ai2++;
 			}
 		});
 		countThread2.start();
