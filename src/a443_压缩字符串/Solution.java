@@ -12,6 +12,7 @@ public class Solution {
         int size = 0;
 
         // 由于最后一个字符也需要判断，所以将右指针终点放到数组之外一格
+        // right <= chars.length 中的等于是为了代码里的 right - left 的计算
         for (int right = 0; right <= chars.length ; right++) {
             // 当遍历完成，或右指针元素不等与左指针元素时，更新数组
             if (right == chars.length || chars[right] != chars[left]) {
@@ -30,6 +31,7 @@ public class Solution {
 
     public static void main(String[] args) {
         char[] chars = new char[]{'a','a','b','b','c','c','c'};
-        new Solution().compress(chars);
+        int compress = new Solution().compress(chars);
+        System.out.println(compress);
     }
 }
