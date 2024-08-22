@@ -49,16 +49,16 @@ public class Solution {
         ListNode even = dumyEven;
 
         ListNode cur = head;
-        int idx = 1;
+        int index = 1;
         while(cur != null) {
-            if((idx & 1) == 1) {
+            if((index & 1) == 1) {
                 odd.next = cur;
                 odd = odd.next;
-                idx++;
+                index++;
             } else {
                 even.next = cur;
                 even = even.next;
-                idx++;
+                index++;
             }
             cur = cur.next;
         }
