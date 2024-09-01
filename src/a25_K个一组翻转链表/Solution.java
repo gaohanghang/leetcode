@@ -39,8 +39,8 @@ public class Solution {
             while (count-- > 0) {
                 ListNode temp = head.next; // 存储下一个节点
                 head.next = cur; // 将当前节点的next域指向前一个节点
-                cur = head; // prev 指针向后移动
-                head = temp; // curr 指针向后移动
+                cur = head; // cur 指针向后移动
+                head = temp; // head 指针向后移动
             }
             head = cur;
         }
