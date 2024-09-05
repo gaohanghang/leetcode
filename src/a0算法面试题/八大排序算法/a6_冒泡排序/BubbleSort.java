@@ -1,5 +1,7 @@
 package a0算法面试题.八大排序算法.a6_冒泡排序;
 
+import com.sun.security.auth.UnixNumericGroupPrincipal;
+
 import java.util.Arrays;
 
 /**
@@ -39,6 +41,21 @@ public class BubbleSort {
             for (int j = 0; j < nums.length - 1 - i; j++) {
                 if (nums[j] > nums[j +1]) { // 交换两数的位置
                     int temp = nums[j];
+                    nums[j] = nums[j+1];
+                    nums[j+1] = temp;
+                }
+            }
+        }
+        return nums;
+    }
+
+    public static int[] bubbleSort3(int[] nums) {
+        int temp = 0;
+        int size = nums.length;
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = 0; j < size - 1 - i; j++) {
+                if(nums[j] > nums[j + 1]) {
+                    temp = nums[j + 1];
                     nums[j] = nums[j+1];
                     nums[j+1] = temp;
                 }
