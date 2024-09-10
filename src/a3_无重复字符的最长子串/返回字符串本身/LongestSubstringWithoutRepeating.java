@@ -13,28 +13,27 @@ public class LongestSubstringWithoutRepeating {
 
     public static String LongestSubstringWithoutRepeating(String s) {
         // 用于记录字符的最新出现位置
-        Map<Character, Integer> charIndexMap = new HashMap();
-        int start = 0;  // 滑动窗口的左边界
+        Map<Character, Integer> map = new HashMap();
         int maxLength = 0;  // 记录最长的子串长度
         int maxStart = 0;   // 记录最长子串的起始位置
 
         // 遍历字符串
-        for (int end = 0; end < s.length(); end++) {
-            char currentChar = s.charAt(end);
+        for (int i = 0, j = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
 
             // 如果当前字符已经存在于map中并且索引大于等于窗口的左边界
-            if (charIndexMap.containsKey(currentChar) && charIndexMap.get(currentChar) >= start) {
+            if (map.containsKey(c)) {
                 // 将窗口的左边界移动到重复字符之后的位置
-                start = charIndexMap.get(currentChar) + 1;
+                j = Math.max(map.get(s.charAt(i)) + 1, j);
             }
 
             // 更新字符的最新位置
-            charIndexMap.put(currentChar, end);
+            map.put(c, i);
 
             // 更新最长子串的长度和起始位置
-            if (end - start + 1 > maxLength) {
-                maxLength = end - start + 1;
-                maxStart = start;
+            if (i - j + 1 > maxLength) {
+                maxLength = i - j + 1;
+                maxStart = j;
             }
         }
 
